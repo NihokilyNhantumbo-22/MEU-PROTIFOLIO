@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================== */
+header {
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.logo-container h1 {
+    font-size: 26px;
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row; /* Garante que fique na horizontal */
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* ==========================================
+   BANNER PRINCIPAL
+   ========================================== */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 8%;
+    background: white;
+}
+
+.banner-texto {
+    width: 50%;
+}
+
+.banner-texto h2 {
+    font-size: 40px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.banner-texto p {
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.banner-imagem {
+    width: 45%;
+}
+
+.banner-imagem img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ==========================================
+   BOTÕES E AÇÕES (INCLUI BOTÃO DO PDF)
+   ========================================== */
+.botao {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 12px 25px;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: #003366;
+}
+
+/* Botão específico para download/documento */
+.btn-pdf {
+    background: #ffd700;
+    color: #003366;
+}
+
+.btn-pdf:hover {
+    background: #e6c200;
+    color: #002244;
+}
+
+/* ==========================================
+   INTRODUÇÃO E SEÇÃO DE DOCUMENTAÇÃO
+   ========================================== */
+.introducao {
+    padding: 60px 8%;
+    background: #eef2f7;
+}
+
+.introducao h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.introducao p {
+    text-align: justify;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   CARDS E SERVIÇOS
+   ========================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.card h3 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    background: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.card a:hover {
+    background: #003366;
+}
+
+/* ==========================================
+   SEÇÕES E PÁGINAS INTERNAS
+   ========================================== */
+section {
+    padding: 60px 8%;
+}
+
+section h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+section ul {
+    margin-left: 25px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para imagens gerais dentro de seções de conteúdo */
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   FORMULÁRIO DE CONTACTO (CORRIGIDO)
+   ========================================== */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    color: #003366;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    width: 100%;
+}
+
+form input[type="submit"]:hover {
+    background: #003366;
+}
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner-texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner-imagem {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .banner-texto h2 {
+        font-size: 30px;
+    }
+}
