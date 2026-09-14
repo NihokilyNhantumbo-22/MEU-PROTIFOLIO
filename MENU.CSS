@@ -1,0 +1,354 @@
+/* ==========================================
+   RESET E REGRA ANTI-VAZAMENTO (RESPONSIVIDADE)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Evita que o site transborde para os lados no telemóvel */
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px; /* Tamanho base de leitura confortável e acessível */
+}
+
+/* ==========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================== */
+header {
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logótipo em grande destaque no PC */
+.logo-img {
+    height: 105px; /* Aumentado para maior visibilidade */
+    width: auto;
+    max-width: 100%;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.logo-container h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+nav ul li a.active {
+    border-bottom: 3px solid white;
+}
+
+/* ==========================================
+   BANNER PRINCIPAL (LADO A LADO NO PC)
+   ========================================== */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 5%;
+    background: white;
+    gap: 20px;
+}
+
+.banner-texto {
+    width: 50%;
+    text-align: left;
+}
+
+.banner-texto h2 {
+    font-size: 2.2rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.banner-texto p {
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+    text-align: justify;
+}
+
+.banner-imagem {
+    width: 45%;
+}
+
+.banner-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================
+   BOTÕES E AÇÕES
+   ========================================== */
+.contacto-btn-container,.pdf-btn-container {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Regra para forçar o botão a centralizar caso esteja isolado */
+.btn-pdf, .botao {
+    display: inline-block;
+    margin: 10px auto;       /* Margem automática nas laterais */
+    padding: 14px 28px;
+    background: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.15rem;
+    transition: .3s;
+    text-align: center;
+}
+
+.btn-pdf:hover {
+    background: #001122;
+}
+
+/* ==========================================
+   SEÇÕES GERAIS E INTRODUÇÃO
+   ========================================== */
+section, .introducao, .pdf-section {
+    padding: 40px 5%;
+}
+
+.introducao {
+    background: #eef2f7;
+}
+
+section h2, .introducao h2, .pdf-section h2 {
+    color: #003366;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section p, .introducao p, .pdf-section p {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ==========================================
+   CARDS E SERVIÇOS
+   ========================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #003366;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h3 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: white;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    background: #ffd700;
+    color: #003366;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.card a:hover {
+    background: #ffffff;
+}
+
+/* ==========================================
+   FORMULÁRIO DE CONTACTO
+   ========================================== */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    color: #003366;
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* ==========================================
+   RESPONSIVIDADE COMPLETA (TELEMÓVEL / TABLET)
+   ========================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 3%;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Logótipo maior também no telemóvel mantendo a responsividade */
+    .logo-img {
+        height: 75px; 
+    }
+
+    .logo-container h1 {
+        font-size: 1.4rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 25px 5%;
+        text-align: center;
+    }
+
+    .banner-texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner-texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .banner-texto p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .banner-imagem {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    section h2, .introducao h2, .pdf-section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p, .introducao p, .pdf-section p {
+        font-size: 1rem;
+    }
+}
